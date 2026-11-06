@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Dead Frequency greybox - first-person explorer controller (build step 2).
+// Dead Frequency greybox - first-person explorer controller (build step 2; comms gate added step 3c).
 // WASD + mouse look (click in Play to pointer-lock, Esc releases), gravity via CharacterController.
 // Uses the Input System direct device API (no input assets needed).
 [RequireComponent(typeof(CharacterController))]
@@ -26,6 +26,7 @@ public class DFPlayerController : MonoBehaviour
         var kb = Keyboard.current;
         var ms = Mouse.current;
         if (kb == null || ms == null) return;
+        if (DFCommsUI.CommsOpen) return; // typing at the comms terminal: stand still
 
         if (ms.leftButton.wasPressedThisFrame && Cursor.lockState != CursorLockMode.Locked)
             Cursor.lockState = CursorLockMode.Locked;
