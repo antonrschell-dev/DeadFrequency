@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3885418120342374932}
   - component: {fileID: 32620548668391166}
+  - component: {fileID: 3985617261556883234}
   m_Layer: 0
   m_Name: PF_HeavySecurityDoor
   m_TagString: Untagged
@@ -88,6 +89,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.09, y: 2.4600005, z: 0.4300002}
   m_Center: {x: -0.265, y: 1.2000002, z: -0.044999897}
+--- !u!114 &3985617261556883234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516435818794729272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9810960debc6c6e40a1d3f7f795f1b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DFDoor
+  OpenAngle: -105
+  Speed: 2.2
+  HingeOffset: 0.47
 --- !u!1 &6838583563972793652
 GameObject:
   m_ObjectHideFlags: 0
